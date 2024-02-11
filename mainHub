@@ -1,0 +1,35 @@
+local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+ 
+local Spin = Library:NewWindow("Dominus | Free Ugc Spinner") -- name game
+ 
+    local Main = Spin:NewSection("Function") -- "Main"
+    
+    local Bun = false
+ 
+ Main:CreateToggle("Auto Spin", function(value)
+Bun = value
+while Bun do
+
+------------------------------Scripter muốn bỏ vô
+
+wait() -- time muốn bỏ vô
+ end -- lệnh end của while
+end)
+
+
+ Main:CreateToggle("Auto Spin", function(value)
+Buns = value
+while Buns do
+
+------------------------------Scripter muốn bỏ vô
+
+wait() -- time muốn bỏ vô
+ end -- lệnh end của while
+end)
+
+
+Main:CreateButton("Anti Afk", function() 
+------------------- Scripter
+end)
+
+local Main = Spin:NewSection("PigUwU.pigfell")

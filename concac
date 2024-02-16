@@ -1,7 +1,7 @@
 GameName = "UGC Luck Royale!"
 
 tab1name = "Main"
-
+tab2name = "PigBun_69"
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 
@@ -20,4 +20,4 @@ game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Spin")
 wait(5)
 end
 end)
-tab2name = "PigBun_69"
+

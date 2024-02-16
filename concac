@@ -9,7 +9,7 @@ local GameName = Library:NewWindow(GameName)
 
 local Tab1 = GameName:NewSection(tab1name)
 
-local Tab2 = GameName:NewSection(tab1name)
+local Tab2 = GameName:NewSection(tab2name)
 
 
 Tab1:CreateToggle("Auto Spin", function(value)

@@ -1,0 +1,164 @@
+-- WL
+loadstring(Game:HttpGet("https://raw.githubusercontent.com/mirovvmteam/MiroScript/main/WL"))() 
+-- script
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+local GameName = "Game hub"
+
+
+
+local tab1name = "Main"
+local tab2name = "Player"
+local tab3name= "Pigpilotfell"
+
+local GameName = Library:NewWindow(GameName)
+
+local Tab1 = GameName:NewSection(tab1name)
+
+Tab1:CreateToggle("Auto Clicker", function(value)
+    _G.name = value
+    while _G.name == true do
+          game:GetService("ReplicatedStorage").common.packages._Index:FindFirstChild("sleitnick_knit@1.5.1").knit.Services.ClickService.RE.Click:FireServer()
+        wait()
+    end
+end)
+
+Tab1:CreateToggle("Auto Habilite", function(value)
+    _G.name = value
+
+    while _G.name == true do
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3.093327760696411, 2.995518922805786, 3.394509792327881)
+
+        wait()
+    end
+end)
+Tab1:CreateToggle("Auto Rebirth", function(value)
+    _G.name = value
+    while _G.name == true do
+        
+        wait()
+    end
+end)
+Tab1:CreateToggle("Auto TP SPAWN", function(value)
+    _G.name = value
+    while _G.name == true do
+        game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0.12800000607967377, 2.9999992847442627, -67.85499572753906)
+
+        wait()
+    end
+end)
+Tab1:CreateToggle("Auto Rebirth", function(value)
+    _G.name = value
+    while _G.name == true do
+        game:GetService("ReplicatedStorage"):WaitForChild("common"):WaitForChild("packages"):WaitForChild("_Index"):WaitForChild("sleitnick_knit@1.5.1"):WaitForChild("knit"):WaitForChild("Services"):WaitForChild("RebirthService"):WaitForChild("RE"):WaitForChild("Rebirth"):FireServer()
+
+        wait()
+    end
+end)
+
+
+Tab1:CreateButton("Antiafk", function(value)
+    loadstring(game:HttpGet("https://pastefy.app/tvGsqkPf/raw"))();
+end)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Không được xóa nhé
+
+
+
+
+
+
+
+
+local Tab2 = GameName:NewSection(tab2name)
+local Tab3 = GameName:NewSection("Pigpilotfell")
+local SupportDmsButton = Tab3:CreateButton("Support Dms", function()
+
+    setclipboard("@piguwu_69")
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Support Dms",
+        Text = "Copied support Dms to clipboard!",
+        Duration = 5
+    })
+end)
+
+local FollowProfileButton = Tab3:CreateButton("Follow Profile", function()
+    setclipboard("https://bit.ly/m/MyProFile")
+    game.StarterGui:SetCore("SendNotification", {
+        Title = "Follow Profile",
+        Text = "Copied profile link to clipboard!",
+        Duration = 5
+    })
+end)local floatName = "FloatName" -- Thay FloatName bằng tên của BasePart để tránh va chạm khi noclip
+
+local Noclip = nil
+local Clip = false -- Bắt đầu ở chế độ noclip tắt
+
+local function noclipToggle()
+    Clip = not Clip -- Đảo ngược trạng thái của Clip để bật hoặc tắt noclip
+    if Clip then
+        -- Nếu noclip được bật
+        Noclip = game:GetService('RunService').Stepped:Connect(function()
+            if game.Players.LocalPlayer.Character then
+                for _, v in ipairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                    if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+                        v.CanCollide = false
+                    end
+                end
+            end
+            wait(0.01) -- Đợi 0.01 giây trước khi lặp lại
+        end)
+    else
+        -- Nếu noclip được tắt
+        if Noclip then
+            Noclip:Disconnect() -- Ngắt kết nối sự kiện nếu đã kết nối
+        end
+        if game.Players.LocalPlayer.Character then
+            for _, v in ipairs(game.Players.LocalPlayer.Character:GetDescendants()) do
+                if v:IsA('BasePart') and v.CanCollide and v.Name ~= floatName then
+                    v.CanCollide = true
+                end
+            end
+        end
+    end
+end
+
+Tab2:CreateToggle("Noclip", function(value)
+    noclipToggle() -- Gọi hàm noclipToggle khi nút được nhấn
+end)
+
+Tab2:CreateButton("Infjump", function(value)
+    local InfiniteJumpEnabled = true
+    game:GetService("UserInputService").JumpRequest:connect(function()
+        if InfiniteJumpEnabled then
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+        end
+    end)
+end)
+
+local speedTextbox = Tab2:CreateTextbox("Flash Walk Speed", function(value)
+    local player = game.Players.LocalPlayer.Character.Humanoid
+    player.WalkSpeed = tonumber(value) or 16 -- Chuyển đổi giá trị thành số hoặc sử dụng mặc định là 16 nếu giá trị không hợp lệ
+end)
+speedTextbox:SetValue("16") -- Thiết lập giá trị mặc định cho hộp văn bản
+
+

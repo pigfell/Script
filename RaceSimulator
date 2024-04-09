@@ -1,5 +1,4 @@
--- WL
-loadstring(Game:HttpGet("https://raw.githubusercontent.com/mirovvmteam/MiroScript/main/WL"))() 
+
 -- script
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
 local GameName = "Game hub"

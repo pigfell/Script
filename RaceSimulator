@@ -1,7 +1,7 @@
 
 -- script
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
-local GameName = "Game hub"
+local GameName = "Race Simulator"
 
 
 
@@ -20,7 +20,13 @@ Tab1:CreateToggle("Auto Clicker", function(value)
         wait()
     end
 end)
+Tab1:CreateToggle("Auto Flags", function(value)
+    _G.name = value
+    while _G.name == true do
+          game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.4593071937561035, 3.192422866821289, 512654.40625)
 
+    end
+end)
 Tab1:CreateToggle("Auto Habilite", function(value)
     _G.name = value
 

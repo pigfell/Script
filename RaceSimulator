@@ -24,7 +24,7 @@ Tab1:CreateToggle("Auto Flags", function(value)
     _G.name = value
     while _G.name == true do
           game:GetService('Players').LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(6.4593071937561035, 3.192422866821289, 512654.40625)
-
+          wait()
     end
 end)
 Tab1:CreateToggle("Auto Habilite", function(value)

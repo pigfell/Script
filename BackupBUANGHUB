@@ -1,0 +1,21 @@
+if not game:IsLoaded() then
+	game.Loaded:Wait()
+end
+
+local games = {
+	[12229756] = 'https://raw.githubusercontent.com/pigfell/Script/main/ALS', -- ALS
+	[5292947] =  'https://raw.githubusercontent.com/pigfell/Script/main/ASTD', -- ASTD
+	[15022320] = 'https://raw.githubusercontent.com/pigfell/Script/main/TTD', -- TTD
+	[5102326] = 'https://raw.githubusercontent.com/pigfell/Script/main/ACD', -- ACD
+	[34121350] = 'https://raw.githubusercontent.com/pigfell/Script/main/AD' -- AD
+}
+if games[game.CreatorId] then
+	
+	task.wait(math.random())
+	if getgenv().buanghub_autoload then
+		return
+	end
+	getgenv().buanghub_autoload = true;
+	
+	loadstring(game:HttpGet(games[game.CreatorId]))()
+end
